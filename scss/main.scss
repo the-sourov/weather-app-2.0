@@ -1,0 +1,314 @@
+// 🌎 ====================> google fonts
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
+
+// ⚓ ====================> scss variables
+$letter-spacing: 1px;
+$unit-s: 1rem;
+$unit-b: 2rem;
+
+// ⚓ ====================> scss mixin
+@mixin gradient {
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+}
+@mixin border {
+  border: 2px solid var(--color-black);
+}
+
+// ⚓ ====================> utility classes
+.t-a-c {
+  text-align: center !important;
+}
+.m-b-s {
+  margin-bottom: $unit-s !important;
+}
+.m-b-b {
+  margin-bottom: $unit-b !important;
+}
+
+// 🌈 ====================> color palette
+:root {
+  --color-primary: rgb(14, 131, 136);
+
+  --color-secondary: rgb(203, 228, 222);
+
+  --color-white: rgb(245, 245, 245);
+
+  --color-black: rgb(51, 51, 51);
+}
+
+// 🪓 ====================> css reset
+html {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-size: 50%; // ====================> base font size is 8px.
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  position: relative;
+}
+
+// 🍕 ====================> body index code start
+.body--index {
+  align-items: center;
+  background-color: var(--color-white);
+  display: flex;
+  justify-content: center;
+
+  & > .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: $unit-b;
+    position: relative;
+    z-index: 10;
+    @include gradient();
+
+    &--hide {
+      display: none;
+    }
+
+    &--part-one {
+      border-radius: $unit-b;
+      box-shadow: -5px -5px 1rem rgba(51, 51, 51, 0.4),
+        0 5px 1rem rgba(51, 51, 51, 0.4);
+      height: clamp(60rem, 60rem, 60rem);
+      width: clamp(50rem, 50rem, 50rem);
+      z-index: 2;
+    }
+
+    &--part-two {
+      border-radius: 0 $unit-b $unit-b 0;
+      height: clamp(50rem, 50rem, 50rem);
+      margin-left: -$unit-b;
+      padding-left: $unit-b * 2;
+      width: clamp(60rem, 60rem, 60rem);
+      z-index: 1;
+    }
+  }
+}
+// 🍕 ====================> body index code end
+
+// 🍕 ====================> body 404 code start
+.body--404 {
+  align-items: center;
+  background-color: var(--color-black);
+  display: flex;
+  justify-content: center;
+
+  &__gif {
+    border-radius: $unit-b;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 50rem;
+
+    &__content {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+// 🍕 ====================> body 404 code end
+
+// 📝 ====================> heading primary code start
+.heading-primary {
+  color: var(--color-white);
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: $letter-spacing;
+  pointer-events: none;
+  text-transform: uppercase;
+}
+// 📝 ====================> heading primary code end
+
+// 📝 ====================> paragraph code start
+.paragraph {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: $letter-spacing;
+  pointer-events: none;
+  text-transform: uppercase;
+
+  &--color-white {
+    color: var(--color-white);
+  }
+
+  &--color-black {
+    color: var(--color-black);
+  }
+}
+// 📝 ====================> paragraph code end
+
+// 🎥 ====================> animation code start
+@keyframes wave {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+// 🎥 ====================> animation code end
+
+// 🔃 ====================> loading screen code start
+.loading-screen {
+  align-items: center;
+  background-color: var(--color-black);
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 20;
+
+  &--hide {
+    display: none;
+  }
+
+  &__bar {
+    animation: wave 1s infinite;
+    border-radius: $unit-b;
+    height: 5rem;
+    width: 5px;
+    @include gradient();
+
+    &:not(:last-child) {
+      margin-right: $unit-s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+    &:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+    &:nth-child(5) {
+      animation-delay: 0.4s;
+    }
+    &:nth-child(6) {
+      animation-delay: 0.5s;
+    }
+    &:nth-child(7) {
+      animation-delay: 0.6s;
+    }
+    &:nth-child(8) {
+      animation-delay: 0.7s;
+    }
+    &:nth-child(9) {
+      animation-delay: 0.8s;
+    }
+    &:nth-child(10) {
+      animation-delay: 0.9s;
+    }
+  }
+}
+// 🔃 ====================> loading screen code end
+
+// 🌎 ====================> section weather code start
+.section-weather {
+  &--part-one {
+    border-radius: inherit;
+    background-color: var(--color-white);
+    padding: inherit;
+    @include border();
+  }
+
+  &__icon {
+    height: 20rem;
+    margin: 0 auto;
+    width: 20rem;
+
+    &__content {
+      display: block;
+      pointer-events: none;
+      width: 100%;
+    }
+  }
+
+  &__temp {
+    color: var(--color-primary);
+    font-size: 6rem;
+    font-weight: 700;
+    letter-spacing: $letter-spacing;
+    pointer-events: none;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    color: var(--color-primary);
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: $letter-spacing;
+    pointer-events: none;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    border-bottom: 2px solid var(--color-white);
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-bottom: $unit-s;
+
+    &:not(:last-child) {
+      margin-bottom: $unit-b;
+    }
+  }
+}
+// 🌎 ====================> section weather code end
+
+// 🎐 ==========> section air quality code start
+.section-air-quality {
+  &__container {
+    align-items: center;
+    border-radius: $unit-b;
+    background-color: var(--color-white);
+    display: flex;
+    justify-content: space-between;
+    padding: $unit-b;
+    @include border();
+  }
+
+  &__caption {
+    border-radius: inherit;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 3rem;
+    font-weight: 700;
+    flex: 0 0 70%;
+    letter-spacing: $letter-spacing;
+    padding: inherit;
+    pointer-events: none;
+    text-transform: uppercase;
+  }
+
+  &__icon {
+    height: 12rem;
+    width: 12rem;
+
+    &__content {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+// 🎐 ==========> section air quality code end

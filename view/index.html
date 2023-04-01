@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Weather App &verbar; 🔥</title>
+  </head>
+
+  <body class="body--index">
+    <!-- 🔃 ====================> loading screen code start -->
+    <div class="loading-screen">
+      <div class="loading-screen__bar">&nbsp;</div>
+      <div class="loading-screen__bar">&nbsp;</div>
+      <div class="loading-screen__bar">&nbsp;</div>
+      <div class="loading-screen__bar">&nbsp;</div>
+      <div class="loading-screen__bar">&nbsp;</div>
+      <div class="loading-screen__bar">&nbsp;</div>
+      <div class="loading-screen__bar">&nbsp;</div>
+      <div class="loading-screen__bar">&nbsp;</div>
+      <div class="loading-screen__bar">&nbsp;</div>
+      <div class="loading-screen__bar">&nbsp;</div>
+    </div>
+    <!-- 🔃 ====================> loading screen code end -->
+
+    <div class="container container--part-one container--hide">
+      <!-- 🍕 ====================> header code start -->
+      <header>
+        <p class="paragraph paragraph--color-white t-a-c" id="location">
+          {%PLACE-HOLDER%}
+        </p>
+      </header>
+      <!-- 🍕 ====================> header code end -->
+
+      <!-- 🌎 ====================> section weather code start -->
+      <section class="section-weather section-weather--part-one">
+        <div class="section-weather__icon">
+          <img
+            src="/images/icon-sun.webp"
+            alt="icon sun"
+            class="section-weather__icon__content"
+          />
+        </div>
+
+        <p class="section-weather__temp t-a-c m-b-s" id="temp">
+          {%PLACE-HOLDER%}
+        </p>
+
+        <p class="section-weather__description t-a-c" id="description">
+          {%PLACE-HOLDER%}
+        </p>
+      </section>
+      <!-- 🌎 ====================> section weather code end -->
+
+      <!-- 🍕 ====================> footer code start -->
+      <footer>
+        <p class="paragraph paragraph--color-black t-a-c">
+          made with 🧡 by sourov
+        </p>
+      </footer>
+      <!-- 🍕 ====================> footer code end -->
+    </div>
+
+    <div class="container container--part-two container--hide">
+      <!-- 🌎 ====================> section weather code start -->
+      <section class="section-weather">
+        <ul>
+          <li class="section-weather__item">
+            <span class="paragraph paragraph--color-white">humidity</span>
+            <span class="paragraph paragraph--color-white" id="humidity">
+              {%PLACE-HOLDER%}
+            </span>
+          </li>
+
+          <li class="section-weather__item">
+            <span class="paragraph paragraph--color-white">wind speed</span>
+            <span class="paragraph paragraph--color-white" id="wind-speed">
+              {%PLACE-HOLDER%}
+            </span>
+          </li>
+
+          <li class="section-weather__item">
+            <span class="paragraph paragraph--color-white">chance of rain</span>
+            <span class="paragraph paragraph--color-white" id="clouds">
+              {%PLACE-HOLDER%}
+            </span>
+          </li>
+        </ul>
+      </section>
+      <!-- 🌎 ====================> section weather code end -->
+
+      <!-- 🎐 ====================> section air quality code start -->
+      <section class="section-air-quality">
+        <h1 class="heading-primary t-a-c m-b-b">air quality</h1>
+
+        <div class="section-air-quality__container">
+          <p class="section-air-quality__caption" id="air-quality">
+            {%PLACE-HOLDER%}
+          </p>
+
+          <div class="section-air-quality__icon">
+            <img
+              src="/images/icon-emoji-mask.webp"
+              alt="icon emoji mask"
+              class="section-air-quality__icon__content"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- 🎐 ====================> section air quality code end -->
+    </div>
+
+    <script src="/script/script.js"></script>
+  </body>
+</html>
